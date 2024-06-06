@@ -1,16 +1,19 @@
----
-tags:
-- FrozenLake-v1-4x4-no_slippery
+# Q Learning Agent Playing FrozenLake-v1-4x4-no_slippery
+This is a trained model of a Q Learning agent playing FrozenLake.
+
+Using Google Colab, I trained a Q Learning agent that learns to go from the starting state (S) to the goal state (G) by walking only on frozen tiles (F) and avoiding holes (H).
+
+# Visual of agent
+https://github.com/rishisim/Frozen-Lake/blob/46f0ff030fdc34cf91c14529b8f070a27566bcba/replay.mp4
+
+# Information about the model
+Environment: FrozenLake-v1-4x4-no_slippery
+Model: Q Learning
+Mean Reward +/- Std. Dev.: 1.00 +/- 0.00
+
 - q-learning
 - reinforcement-learning
 - custom-implementation
-model-index:
-- name: q-FrozenLake-v1-4x4-noSlippery
-  results:
-  - task:
-      type: reinforcement-learning
-      name: reinforcement-learning
-    dataset:
       name: FrozenLake-v1-4x4-no_slippery
       type: FrozenLake-v1-4x4-no_slippery
     metrics:
@@ -18,18 +21,3 @@ model-index:
       value: 1.00 +/- 0.00
       name: mean_reward
       verified: false
----
-
-  # **Q-Learning** Agent playing1 **FrozenLake-v1**
-  This is a trained model of a **Q-Learning** agent playing **FrozenLake-v1** .
-
-  ## Usage
-
-  ```python
-
-  model = load_from_hub(repo_id="rishisim/q-FrozenLake-v1-4x4-noSlippery", filename="q-learning.pkl")
-
-  # Don't forget to check if you need to add additional attributes (is_slippery=False etc)
-  env = gym.make(model["env_id"])
-  ```
-  
